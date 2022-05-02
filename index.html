@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/styles.css">
+   <title>Calendar</title>
+</head>
+<body>
+   <div class="app">
+      <div class="calendar">
+         <div class="button__wrapper">
+            <button class="button theme__light">Hide Datepicker</button>
+         </div>
+         <div class="calendar__wrapper theme__light">
+            <div class="month">
+               <div class="month__row">
+                  <div class="month__current"></div>
+                  <div class="arrow">
+                     <div class="arrow__container arrow__left theme__light">
+                        <span>&#60</span>
+                     </div>
+                     <div class="year__current"></div>
+                     <div class="arrow__container arrow__right theme__light">
+                        <span>&#62</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="days">
+               <div class="days__row theme__light"></div>
+            </div>
+            <div class="date">
+               <div class="date__row"></div>
+            </div>
+            <div class="theme">
+               <div class="theme__row">
+                  <div class="theme__title">
+                     <p>Light Mode</p>
+                  </div>
+                  <label class="switch">
+                     <input id="switch" type="checkbox">
+                     <span class="slider round theme__light"></span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./data/data.js"></script>
+   <script src="./data/constants.js"></script>
+   <script src="./helpers/helpers.js"></script>
+   <script src="./scripts/scripts.js"></script>
+</body>
+</html>

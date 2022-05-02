@@ -1,0 +1,17 @@
+const arrowLeft = document.querySelector('.arrow__left > span');
+const arrowRight = document.querySelector('.arrow__right > span');
+const button = document.querySelector('.button');
+const daysContainer = document.querySelector('.days__row');
+const dateContainer = document.querySelector('.date__row');
+const cells = dateContainer.childNodes;
+const year = document.querySelector('.year__current');
+const month = document.querySelector('.month__current');
+const switcher = document.querySelector('#switch');
+const calendar = document.querySelector('.calendar__wrapper');
+const themeTitle = document.querySelector('.theme__title p');
+let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth();
+let theme = 'light';
+let showDatepicker = false;
+const selectedDates = {};
+const allSelectedDates = [];

@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	min-height: 100vh;
+  width: 100%;
+	background-color: rgb(77, 76, 90);
+}
+
+.button__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.button {
+  align-items: center;
+  background-color: #ffffff;
+  color: #000000;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  letter-spacing: 2px;
+  min-height: 40px;
+  min-width: 190px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
+  width: 600px;
+}
+
+.calendar__wrapper {
+  padding: 0 30px;
+  border-radius: 7%;
+}
+
+.month {
+  font-size: 42px;
+}
+
+.month__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: flex;
+}
+
+.month__current {
+  letter-spacing: 2px;
+  margin: 0 0 0 30px;
+}
+
+.arrow__container {
+  display: flex;
+  align-items: center;
+  margin: 0 35px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.arrow__container span {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.arrow__container span:hover {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.arrow__left span:hover {
+  text-shadow: rgba(255, 255, 255, 0.596) -20px 0px 10px;
+}
+
+.arrow__left.theme__light span:hover {
+  text-shadow: #000000 -20px 0px 10px;
+}
+
+.arrow__right span:hover {
+  text-shadow: rgba(255, 255, 255, 0.596) 20px 0px 10px;
+}
+
+.arrow__right.theme__light span:hover {
+  text-shadow: #000000 20px 0px 10px;
+}
+
+.days__row {
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.6;
+}
+
+.days__element {
+  flex: 1 0 14.25%;
+  text-align: center;
+	font-size: 18px;
+}
+
+.date {
+  min-height: 410px;
+}
+
+.date__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.date__cell.select.theme__light, 
+.date__cell.select.theme__dark {
+  border-radius: 50%;
+  background: blue;
+}
+
+.date__cell {
+  flex: 1 0 14.25%;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid transparent;
+}
+
+.date__cell.blocked:hover {
+  cursor: not-allowed;
+  border: 2px solid transparent;
+}
+
+.date__cell:hover {
+  border: 2px solid #ffffff;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.date__cell.select.theme__light:hover,
+.date__cell.select.theme__dark:hover {
+  border: 2px solid transparent;
+  cursor: default;
+  transition: 0s;
+}
+
+
+.date__cell.theme__light:hover {
+  border: 2px solid #000000;
+}
+.date__cell.blocked.theme__light:hover {
+  border: 2px solid transparent;
+}
+
+.date__cell.empty:hover {
+  border: 2px solid transparent;
+  cursor: default;
+}
+
+.theme__row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 20px;
+}
+
+.theme__bottom {
+  padding: 0 20px;
+}
+
+.theme__title p {
+  text-transform: capitalize;
+  padding-right: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider.theme__light {
+  background-color: rgb(77, 76, 90);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  transition: .4s;
+}
+
+.slider.theme__light:before {
+  background-color: #ffffff;
+}
+
+.slider.theme__dark:before {
+  background-color: #000000;
+}
+
+input:checked + .slider {
+  background-color: #ffffff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ffffff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.theme__light {
+	color: #000000;
+	background: #ffffff;
+}
+
+.theme__dark {
+	color: #ffffff;
+	background: #000000;
+}
